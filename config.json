@@ -1,0 +1,55 @@
+{
+  "version": "2.5.0",
+  "device": {
+    "detection": "auto_dynamic",
+    "supported_managers": [
+      "Magisk",
+      "Kitsune Mask",
+      "KernelSU",
+      "KernelSU-Next",
+      "APatch",
+      "SukiSU",
+      "SUSFS"
+    ],
+    "supported_architectures": [
+      "arm64-v8a",
+      "armeabi-v7a",
+      "x86_64",
+      "x86"
+    ]
+  },
+  "crawler": {
+    "cache_dir": "~/.cache/root-arsenal",
+    "catalog_file": "~/.cache/root-arsenal/catalog.json",
+    "cache_ttl_seconds": 86400,
+    "request_timeout_seconds": 10,
+    "parallel_workers": 12,
+    "sources": [
+      "Awesome-Android-Root",
+      "Awesome-Shizuku",
+      "Best-Shizuku-Apps",
+      "Magisk-Modules-Alt-Repo-v2",
+      "MMRL-ZG-R-Gems",
+      "MMRL-Community",
+      "Awesome-KernelSU",
+      "Awesome-Temporary-Root",
+      "GitHub-Topic-API",
+      "F-Droid-Search-API",
+      "GitLab-FDroidData",
+      "On-Device-Builtin"
+    ]
+  },
+  "installer": {
+    "termux_download_dir": "~/root-arsenal/downloads",
+    "storage_mirror_dir": "/sdcard/Download/RootArsenal",
+    "prefer_zygisk": true,
+    "auto_haptic_feedback": true,
+    "system_toasts": true,
+    "system_notifications": true
+  },
+  "windows_adb": {
+    "default_mode": "termux_remote",
+    "enable_vt_ansi": true,
+    "auto_download_platform_tools": true
+  }
+}

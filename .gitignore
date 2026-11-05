@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local catalogs & temporary cache
+catalog.json
+*.cache
+.cache/
+favorites.json
+history.log
+
+# User downloads, packages & device backups
+downloads/
+backups/
+*.apk
+*.zip
+*.tar.gz
+*.tmp
+
+# Operating system artifacts
+.DS_Store
+Thumbs.db
