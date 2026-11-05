@@ -75,7 +75,7 @@ def run_root_cmd(cmd: str, timeout: int = 120, mount_master: bool = False) -> tu
 
 
 def vibrate_tick(ms: int = 18):
-    """Triggers a subtle hardware haptic click on OnePlus 8T via sysfs vibrator."""
+    """Triggers a subtle hardware haptic click on Android devices via sysfs vibrator."""
     if USE_ADB:
         try:
             adb_cmd = ["adb"]

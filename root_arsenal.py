@@ -2,7 +2,7 @@
 """
 RootArsenal v2.5 (root-arsenal / rarsenal)
 Smart Multi-Source Crawler, Category Browser, Multi-Digit Selector & Volume-Key Installer.
-Tailored for OnePlus 8T (KB2003 / Snapdragon 865 / arm64-v8a / Android 14 / Magisk).
+Cross-platform Android root & system tooling suite.
 """
 
 import argparse
@@ -767,7 +767,9 @@ class RootArsenalTUI:
         print(f"{GRAY}{'─' * cols}{RESET}")
         print(f"{WHITE}{item.get('description', '')}{RESET}")
         print(f"{GRAY}{'─' * cols}{RESET}")
-        print(f"{YELLOW}[*] Resolving best installable packages/assets for OnePlus 8T (arm64-v8a)...{RESET}")
+        model = get_device_model()
+        abi = get_device_abi()
+        print(f"{YELLOW}[*] Resolving best installable packages/assets for {model} ({abi})...{RESET}")
 
         candidates = resolve_download_candidates(item)
         self.input_reader.flush()
@@ -1507,7 +1509,7 @@ def main():
     )
     parser.add_argument("--crawl", action="store_true", help="Force re-crawl all 8 live sources and update cache")
     parser.add_argument("--categories", action="store_true", help="List all categories and tool counts")
-    parser.add_argument("--telemetry", action="store_true", help="Display live OnePlus 8T root & hardware telemetry")
+    parser.add_argument("--telemetry", action="store_true", help="Display live device root & hardware telemetry")
     parser.add_argument("--backup", action="store_true", help="Create a full backup of /data/adb/modules and magisk.db")
     parser.add_argument("--adb", action="store_true", help="Run in ADB mode for Windows / PC USB connection")
     parser.add_argument("--device", type=str, default=None, help="Specific ADB device serial (optional)")
